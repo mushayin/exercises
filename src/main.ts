@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import './style.css'
 // import 'katex/dist/katex.min.css'
 import App from './App.vue'
@@ -20,6 +20,6 @@ const routes = [
 	{ path: '/view', component: ViewPage }
 ]
 
-const router = createRouter({ history: createWebHistory(import.meta.env.BASE_URL), routes })
+const router = createRouter({ history: createWebHashHistory(), routes })
 
 createApp(App).use(router).use(Antd).mount('#app')
