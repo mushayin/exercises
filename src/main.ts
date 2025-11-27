@@ -20,6 +20,6 @@ const routes = [
 	{ path: '/view', component: ViewPage }
 ]
 
-const router = createRouter({ history: createWebHistory(), routes })
+const router = createRouter({ history: createWebHistory(import.meta.env.BASE_URL), routes })
 
 createApp(App).use(router).use(Antd).mount('#app')
