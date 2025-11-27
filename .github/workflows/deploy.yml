@@ -23,14 +23,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Enable corepack and install pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@latest --activate
-          pnpm install
-
       - name: Build
-        run: pnpm run build
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
